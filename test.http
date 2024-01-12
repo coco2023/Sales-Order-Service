@@ -1,0 +1,37 @@
+### Create SalesOrder
+POST http://localhost:9032/api/v1/salesOrders
+Content-Type: application/json
+
+{
+  "salesOrderSn": "ORDER001",
+  "customerId": 12345,
+  "supplierId": 1,
+  "customerName": "John Smith",
+  "customerEmail": "john.smith@example.com",
+  "orderDate": "2024-01-12T10:00:00",
+  "totalAmount": 100.50,
+  "shippingAddress": "123 Main Street, Anytown, AN 12345",
+  "billingAddress": "456 Secondary Rd, Othertown, OT 67890",
+  "orderStatus": "PENDING",
+  "paymentMethod": "PayPal",
+  "paymentProcessed": false,
+  "lastUpdated": "2024-01-12T10:00:00",
+  "expirationDate": "2024-02-11T10:00:00"
+}
+
+###
+### Create SalesOrderDetails
+POST http://localhost:9032/api/v1/salesOrderDetails
+Content-Type: application/json
+
+{
+  "salesOrderSn": "ORDER001",
+  "skuCode": "SKU12345",
+  "supplierId": 1,
+  "quantity": 2,
+  "unitPrice": 50.00,
+  "discount": 5.00,
+  "lineTotal": 95.00
+}
+
+###
